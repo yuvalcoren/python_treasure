@@ -21,6 +21,14 @@ def create_treasure_file():
 
 
 def top_score(score):
+    """
+    Function receives score, check if It can enter the top 10 scorers, if achived, it is entered
+    in top_score.txt which contains top 10 scorers. Firstly gets the file content, sorts it with lambda (by its integer score)
+    then check if the worst score (most attempts) is better than users score. if user score is better,
+    it is entered in, and the list is sorted once again (with the worst score getting out of table)
+    :param score:
+    :return:
+    """
     with open('top_score.txt', mode='r+') as file:
         lst_score = file.readlines()
         lst_score = sorted(lst_score, key=lambda x: int(x.split()[1]))
@@ -57,7 +65,7 @@ def start_game():
             if not file_cont[file.tell()].isdigit():
                 break
 
-        print('Success! you hit the treasure')
+        print(f'Success! you hit the treasure in {score} moves!')
         top_score(score)
 
 
