@@ -27,7 +27,9 @@ def top_score(score):
     then check if the worst score (most attempts) is better than users score. if user score is better,
     it is entered in, and the list is sorted once again (with the worst score getting out of table)
     :param score:
+    integer
     :return:
+    none
     """
     with open('top_score.txt', mode='r+') as file:
         lst_score = file.readlines()
