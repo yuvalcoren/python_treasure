@@ -28,7 +28,7 @@ def top_score(score):
             lst_score.append(f'{input("Enter name: ")} {score} \n')
 
         elif int(sorted(lst_score[-1].split())[0]) > score:
-            del lst_score[0]
+            del lst_score[-1]
             lst_score.append(f'{input("Well played, you entered to top scorers! Enter your name: ")} {score} \n')
 
         lst_score = sorted(lst_score, key=lambda x: int(x.split()[1]))
