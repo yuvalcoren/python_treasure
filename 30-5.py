@@ -22,7 +22,6 @@ def create_treasure_file():
 
 def top_score(score):
     with open('top_score.txt', mode='r+') as file:
-        file.seek(0)
         lst_score = file.readlines()
         lst_score = sorted(lst_score, key=lambda x: int(x.split()[1]))
         if len(lst_score) < 10:
@@ -33,7 +32,6 @@ def top_score(score):
             lst_score.append(f'{input("Well played, you entered to top scorers! Enter your name: ")} {score} \n')
 
         lst_score = sorted(lst_score, key=lambda x: int(x.split()[1]))
-        print(lst_score)
         file.seek(0)
         file.writelines(lst_score)
 
