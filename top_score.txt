@@ -1,9 +1,10 @@
-rotem 2 
+rotem 2
+Kobi 3
 David 3
-yigal 3 
-Moshe 3 
+yigal 3
+Moshe 3
 yuval 4
-shimon 5 
+shimon 5
+Gilad 6
 Shany 8
 Daniel 9
-Yossi 10

@@ -33,9 +33,8 @@ def top_score(score):
     """
     with open('top_score.txt', mode='r+') as file:
         lst_score = file.readlines()
-        lst_score = sorted(lst_score, key=lambda x: int(x.split()[1]))
-        if len(lst_score) < 10:
-            lst_score.append(f'{input("Enter name: ")} {score} \n')
+        if len(lst_score) < 10
+            lst_score.append(f'{input("Enter name top enter top scorers table! ")} {score} \n')
 
         elif int(sorted(lst_score[-1].split())[0]) > score:
             del lst_score[-1]
