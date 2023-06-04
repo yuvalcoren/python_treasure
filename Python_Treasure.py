@@ -33,7 +33,7 @@ def top_score(score):
     """
     with open('top_score.txt', mode='r+') as file:
         lst_score = file.readlines()
-        if len(lst_score) < 10
+        if len(lst_score) < 10:
             lst_score.append(f'{input("Enter name top enter top scorers table! ")} {score} \n')
 
         elif int(sorted(lst_score[-1].split())[0]) > score:
@@ -54,9 +54,15 @@ def start_game():
             choice = int(input('Where do you want to move? [1 - forward, 2 - backward]: '))
             if choice == 1:
                 choice = int(input('How many characters forward? '))
+                if file.tell() + choice >= len(file_cont):
+                    print('Out of boundaries. Try again.')
+                    continue
                 file.seek(file.tell() + choice)
             elif choice == 2:
                 choice = int(input('How many characters backward? '))
+                if file.tell() - choice < 0:
+                    print('Out of boundaries. Try again.')
+                    continue
                 file.seek(file.tell() - choice)
             else:
                 print('Enter 1 for forward or 2 for backwards.')

@@ -5,6 +5,6 @@ yigal 3
 Moshe 3
 yuval 4
 shimon 5
+Shifra 5 
 Gilad 6
-Shany 8
-Daniel 9
+Nir 6 
